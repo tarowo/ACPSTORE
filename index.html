@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The ACP™️</title>
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .header a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      margin-right: 20px;
+    }
+    .header a:hover {
+      color: blue;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+    .discord-icon {
+      height: 200px;
+      cursor: pointer;
+    }
+	body {
+	  background-image: url("background.jpg");
+	  background-color: #ccccc;
+	}
+	
+	h1 {
+	  color: white;
+	}
+	
+	p {
+	  color: white;
+	}	
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="https://theacp.store">Home</a>
+    <a href="https://theacp.store/luka">Luka</a>
+    <a href="https://theacp.store/bookings">Booking</a>
+    <a href="https://theacp.store/info">Info</a>
+  </div>
+  <div class="center">
+    <img class="discord-icon" src="discord.png" alt="Discord Icon">
+  </div>
+  <br>
+  <center><h1>Discord</h1></center>
+  <script>
+    const discordIcon = document.querySelector(".discord-icon");
+    discordIcon.addEventListener("click", () => {
+      window.location.href = "https://discord.com/invite/yuhKw6xBtb";
+    });
+  </script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<center><audio controls autoplay loop>
+  <source src="main.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio></center>
+<center><p>Our Official Theme Song for Mr. ACP</p></center>
+</body>
+</html>
