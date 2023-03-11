@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/tarowojr/Downloads/test.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Perpetrator Slideshow</title>
+	<style>
+		/* Customize the style of the slideshow */
+		.slideshow-container {
+			max-width: 500px;
+			position: relative;
+			margin: auto;
+		}
+		.slideshow-container img {
+			max-width: 100%;
+			height: auto;
+		}
+		.text {
+			color: white;
+			font-size: 30px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+	<h1>Perpetrator Slideshow</h1>
+	<div class="slideshow-container">
+		<div class="mySlides fade" style="display: block;">
+			<img src="2019.jpg" alt="Perpetrator 2019">
+			<div class="text">Perpetrator</div>
+		</div>
+		<div class="mySlides fade" style="display: none;">
+			<img src="2023.jpg" alt="Perpetrator 2023">
+			<div class="text">Perpetrator</div>
+		</div>
+	</div>
+	<br>
+	<!-- Add navigation buttons -->
+	<div style="text-align:center">
+		<button class="prev" onclick="plusSlides(-1)">❮ Prev</button>
+		<button class="next" onclick="plusSlides(1)">Next ❯</button>
+	</div>
+	<!-- Add dots to indicate current slide -->
+	<div style="text-align:center">
+		<span class="dot active" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+	</div>
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+		}
+	</script>
+
+
+</body></html>
